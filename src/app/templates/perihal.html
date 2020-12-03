@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/perihal.css')}}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+    </style>
+</head>
+
+<body class="body">
+    <div class="containerprogram fadefirst">
+        <div class="program">
+            <!-- container konsep search engine -->
+            <h1 style="text-align: center;">
+                How does this rip-off work?
+            </h1>
+            <p style="text-align: justify; margin: 20px;">
+                Rip-off kami menggunakan konsep Information Retrieval dengan Vector Space Model. Setelah user menuliskan
+                query di dalam search bar dan menuliskan submit, program akan menampilkan urutan dokumen dari yang
+                paling relevan sampai dengan dokumen yang paling tidak relevan.
+            </p>
+        </div>
+        <div class="program">
+            <!-- container how to use -->
+            <h1 style="text-align: center;">
+                How to use this rip-off?
+            </h1>
+            <p style="text-align: justify; margin: 20px;">
+                Silakan gunakan rip-off ini sama seperti Anda menggunakan search engine pada umumnya.
+            </p>
+        </div>
+    </div>
+    <div class="fadesecond">
+        <!-- container tentang kita -->
+        <div class="aboutus">
+            <h1 style="text-align: center;">About Us</h1>
+        </div>
+        <div class="columncontainer">
+            <div class="column">
+                <div class="card">
+                    <img class="image" src="{{url_for('static',filename='andrew.png')}}" alt="Andrew">
+                    <h2 class="nama">Andrew</h2>
+                    <h3 class="nim">13519036</h3>
+                    <p class="tugas">Front-end Developer</p>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="card">
+                    <img class="image" src="{{url_for('static',filename='moses.jpg')}}" alt="Moses">
+                    <h2 class="nama">Moses</h2>
+                    <h3 class="nim">13519076</h3>
+                    <p class="tugas">Back-end Developer</p>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="card">
+                    <img class="image" src="{{url_for('static',filename='rizal.png')}}" alt="Rizal">
+                    <h2 class="nama">Rizal</h2>
+                    <h3 class="nim">13519136</h3>
+                    <p class="tugas">Back-end Developer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="centerbalek">
+        <div class="kotakbalek">
+            <a href="{{url_for('index')}}">
+                <img id="balek" title="Back to Index" src="{{url_for('static',filename='backspace.png')}}"
+                    alt="Back to Index">
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+@keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+@-moz-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+@-webkit-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+@-o-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+@-ms-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+.fadefirst {
+    animation: fadeIn ease 3s;
+    -webkit-animation: fadeIn ease 3s;
+    -moz-animation: fadeIn ease 3s;
+    -o-animation: fadeIn ease 3s;
+    -ms-animation: fadeIn ease 3s;
+}
+@keyframes fadeInD{
+    0% { opacity:0; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes fadeInD{
+    0% { opacity:0; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes fadeInD{
+    0% { opacity:0; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-o-keyframes fadeInD{
+    0% { opacity:0; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-ms-keyframes fadeInD{
+    0% { opacity:0; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+.fadesecond{
+    animation: 6s ease 0s normal forwards 1 fadeInD ;
+    -webkit-animation: 6s ease 0s normal forwards 1 fadeInD;
+}
+
+.body{
+    font-family: 'Open Sans', sans-serif;
+    background-image: url('../toradora.jpg');
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.columncontainer{
+    display: flex;
+    flex-direction: row;
+}
+.program{
+    width: 50%;
+    margin: 50px;
+    background: rgba(256,256,256,0.9);
+    box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.5);
+}
+.containerprogram{
+    display: flex;
+    flex-direction: row;
+}
+.aboutus{
+    background:rgba(256,256,256,0.9);
+}
+.column{
+    width: 33%;
+    padding: 0 115px;
+}
+.card{
+    box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.5);
+    object-fit: contain;
+    display: inline-block;
+    background:rgba(256,256,256,0.9);
+}
+.image{
+    height: 200px;
+    width: 200px;
+    display: block;
+    margin: 8px;
+}
+.nama{
+    text-align: center;
+}
+.tugas{
+    text-align: center;
+    color: black;
+    font-size: 20px;
+}
+.nim{
+    text-align: center;
+}
+.centerbalek{
+    display: flex;
+    justify-content: center;
+}
+.kotakbalek{
+    background: white;
+    width: 76px;
+    height: 76px;
+    border-radius: 20px;
+}
+#balek{
+    width: 60px;
+    height: 60px;
+    margin: 8px;
+}

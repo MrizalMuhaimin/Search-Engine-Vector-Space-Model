@@ -1,0 +1,44 @@
+/* CSS untuk index */
+#judulpage{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: greenyellow;
+}
+.body{
+    font-family: 'Open Sans', sans-serif;
+}
+.centerbody{
+    padding-top: 170px;
+}
+.perihal{
+    text-align: center;
+}
+.searchbar{
+    display: flex;
+    justify-content: center;
+    margin: 8px;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+}
+.hasilquery{
+    border-left: greenyellow solid 8px;
+    margin: 8px;
+    background: rgba(173, 255, 47, 0.3);
+}
+.isiquery{
+    margin: 8px;
+}
+a{
+    text-decoration: none;
+}
+/* CSS untuk adddata */
+/* CSS untuk upload */
+.fileupload{
+    display: flex;
+    justify-content: center;
+    margin: 8px;
+}
+/* CSS untuk googling */

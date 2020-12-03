@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search and Add from Google</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')}}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+    </style>
+</head>
+
+<body class="body">
+    <div class="centerbody">
+        <h1 id="judulpage">Cari dan Tambahkan Dokumen dari Google</h1>
+    </div>
+    <div class="searchbar">
+        <form action="/googling" method="post">
+            <label for="query" style="text-align: center;">Enter your query</label><br>
+            <input type="text" id="query" name="query" size="50px" maxlength="50">
+            <input type="submit" style="font-family: 'Open Sans', sans-serif;" value="Submit">
+        </form>
+    </div>
+    <div>
+        <p>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <ul class=flashes>
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            {% endwith %}
+        </p>
+    </div>
+    <div class="perihal"><a href="{{url_for('index')}}">Back to Index</a></div>
+</body>
+
+</html>

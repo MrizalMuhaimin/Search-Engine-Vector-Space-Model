@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>私のグーグル</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')}}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+    </style>
+</head>
+
+<body class="body">
+    <div class="centerbody">
+        <div>
+            <h1 id="judulpage">
+                私のグーグル artinya MyGoogle
+            </h1>
+        </div>
+        <div class="perihal">
+            <a href="{{ url_for('perihal')}}" title="Ayo diklik, kepo kan?">Tentang Kami dan Rip-Off Kami</a>
+        </div>
+        <div class="perihal">
+            <a href="{{ url_for('adddata')}}" title="Menuh-menuhin database"">Tambahkan Dokumen</a>
+    </div>
+    <div>
+        <form action=" /index" enctype="multipart/form-data" method="post">
+                <label for="query" style="text-align: center;"></label>
+                <div class="searchbar">
+                    <input type="text" id="query" name="query" size="50px" maxlength="50">
+                </div>
+                <div class="button">
+                    <input type="submit" style="font-family: 'Open Sans', sans-serif;" value="Mari kita cari!">
+                </div>
+                </form>
+        </div>
+    </div>
+    <div>
+        {% if show %}
+        <div>
+            <h4 style="text-align: center;">Query : {{query}}</h4>
+        </div>
+        <div>
+            {% for row in dict %}
+            <div class="hasilquery">
+                <div class="isiquery">
+                    {% if row[7]  %}
+                    {% if 'https' in row[1] %}
+                    <p><a href="{{ row[1] }} "> {{ row[2] }}</a> </p>
+                    {% else %}
+                    <p><a href="{{ url_for('static', filename='uploads/'+row[1] )}} "> {{ row[2] }}</a> </p>
+                    {% endif %}
+                    <p>Tingkat Kemiripan : {{ row[7] }} % </p>
+                    <p>Jumlah Karakter : {{ row[5] }} </p>
+                    <p>Jumlah Kata : {{ row[6] }} </p>
+                    <p>{{ (row[3])[:360] }}</p>
+                    {% endif %}
+                </div>
+            </div>
+
+            {% endfor %}
+
+            <div>
+                {% for table in tables %}
+                {{ table|safe }}
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</body>
+
+</html>

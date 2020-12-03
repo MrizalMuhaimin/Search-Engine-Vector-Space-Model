@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambahkan Dokumen</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')}}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+    </style>
+</head>
+<body class="body">
+	<div class="centerbody">
+		<h1 id="judulpage">Tambahkan Dokumen</h1>
+    </div>
+    <div class="perihal"><a href="{{url_for('upload')}}">Upload Files</a></div>
+    <div class="perihal"><a href="{{url_for('googling')}}">Search and Add from Google</a></div>
+    <div class="perihal"><a href="{{url_for('index')}}">Back to Index</a></div>
+</body>
+</html>
